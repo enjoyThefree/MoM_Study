@@ -58,7 +58,7 @@ void FillmatZ()
 	complex<double> constant2(0, -1 / (4 * pi * omega * epsilon));
 	cx_colvec Factor_A(rwg_num, 1), Factor_Fi(rwg_num, 1);
 
-	cube Pho_P(9, 3, rwg_num), Pho_N(9, 3, rwg_num);        //   非公共边对应点到重心 的矢量 扩展 9*3*rwg_num；每一层都是同一个rwg的其中一个三角形的 pho；1*3 --> 9*3
+	cube Pho_P(9, 3, rwg_num), Pho_N(9, 3, rwg_num);        //   非公共边对应点到重心 的矢量 扩展 9*3*rwg_num；每一层都是同一个rwg的其中一个原始三角形的 pho；1*3 --> 9*3
 
 	/*cx_mat z(rwg_num, rwg_num);*/
 	rowvec Pos_index, Nega_index;   // 在RWG中 正负三角形element编号 所在位置
@@ -128,14 +128,14 @@ void FillmatZ()
 			Nega_index = nega;
 		}
 
-		/*计算格林函数*/
+		/*计算格林函数、第 m 个与第 n 个element的格林函数*/
 		//cube RepmatCenter(9, 3, rwg_num);   //element 重心扩展
 		//cube RepmatCenter_(9, 3, rwg_num);  //element九点划分后重心
 		for (int n = 0; n < elem_num; n++) {
 			//element九点划分重心扩展，一层9个小三角形element重心 --> 9*3*elem_num
 			RepmatCenter_.slice(n) = Center_.slice(m);
 
-			//将一个element的重心扩展到 9*3*elem_num
+			//将第 n 个原始element的重心扩展到 9*3*elem_num
 			mat temp(9, 3);
 			for (int i = 0; i < 9; i++) {
 				temp.row(i) = Center.row(n);
@@ -174,7 +174,7 @@ void FillmatZ()
 			for (int i = 0; i < num_pos; i++) {
 				p_index = Pos_index(i);
 				for (int j = 0; j < rwg_num; j++) {
-					R_PN.slice(j) = Pho_Pos_.slice(p_index);
+					R_PN.slice(j) = Pho_Pos_.slice(p_index);  
 				}
 				cube tempP_(9, 3, rwg_num), tempN_(9, 3, rwg_num);
 				tempP_ = R_PN % Pho_P;    //
