@@ -165,6 +165,7 @@
     <ClInclude Include="FillZmat.h" />
     <ClInclude Include="InputData.h" />
     <ClInclude Include="NinePointIntegral.h" />
+    <ClInclude Include="SolveMat.h" />
     <ClInclude Include="uniform.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

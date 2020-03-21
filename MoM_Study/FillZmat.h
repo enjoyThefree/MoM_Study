@@ -31,14 +31,14 @@ extern mat Pho_Naga;      //对于负element三角形 非公共边点到重心的向量坐标
 extern cube Pho_Pos_;     //对于正element三角形 九点划分后 非公共边点到 小三角形重心的向量坐标
 extern cube Pho_Naga_;    //对于负element三角形 九点划分后 非公共边点到 小三角形重心的向量坐标
 
-extern const double pi = 3.1415926535898;
-extern double mu = 4 * pi * 1e-7;
-extern double epsilon = 8.854187817 * 1e-12;
-extern double f = 0;
-extern double c = 1.0 / sqrt(mu * epsilon);
-extern double lamda = 0;
-extern double omega = 0;
-extern double k = 0;
+extern const double pi;    //3.1415926535898;
+extern double mu;         // 4 * pi * 1e-7;
+extern double epsilon;   // 8.854187817 * 1e-12;
+extern double f ;
+extern double c ;
+extern double lamda;
+extern double omega ;
+extern double k;
 extern int FastGF ;    //快速格林函数算法
 extern double delta;
 extern cx_rowvec Phase_base;
@@ -230,7 +230,7 @@ void FillmatZ()
 
 	clock_t end = clock();
 	printf("\n Z矩阵填充时间为 \t");
-	cout << (end - start) << "s" << endl;
+	cout << (end - start) << "ms" << endl;
 
 	Z = z;
 } 
