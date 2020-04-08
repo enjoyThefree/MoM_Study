@@ -1,0 +1,14 @@
+﻿  ReadData.cpp
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(71,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(76,22): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(171,23): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(175,23): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(200,23): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(204,23): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(278,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(282,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(296,20): warning C4018: “<”: 有符号/无符号不匹配
+E:\VS_WorkSpace\Mesh\Mesh\ReadData.cpp(299,20): warning C4018: “<”: 有符号/无符号不匹配
+  main.cpp
+  正在生成代码...
+  Mesh.vcxproj -> E:\VS_WorkSpace\Mesh\Debug\Mesh.exe
